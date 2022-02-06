@@ -57,8 +57,14 @@ body{
 	Writer ${b.writer} <br>
 	Title : ${b.title} <br>
 	Content : ${b.content}<br>
-	
+	<c:choose>
+	<c:when test="${b.files != null}">
 	Files : ${b.files }
+	</c:when>
+	<c:otherwise>
+	Files : Nothing...
+	</c:otherwise>
+	</c:choose>
 	</span>
 	<hr>
 	
